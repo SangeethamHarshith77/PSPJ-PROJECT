@@ -4,18 +4,18 @@ public class WeeklyMealPlannerGroceryGenerator{
 
     static Scanner sc = new Scanner(System.in);
 
-    // CO-3: 1D Array - Days of the Week
+   
     static String[] days = {
         "Monday", "Tuesday", "Wednesday",
         "Thursday", "Friday", "Saturday", "Sunday"
     };
 
-    // CO-3: 1D Array - Meal Types
+   
     static String[] mealTypes = {
         "Breakfast", "Lunch", "Dinner"
     };
 
-    // CO-3: 1D Array - Available Meals
+   
     static String[] meals = {
         "Eggs and Toast",
         "Chicken Rice",
@@ -24,8 +24,7 @@ public class WeeklyMealPlannerGroceryGenerator{
         "Dal Rice"
     };
 
-    // CO-3: Single 1D Array
-    // 7 days x 3 meals = 21
+    
     static String[] mealPlan = new String[21];
 
 
@@ -69,7 +68,7 @@ public class WeeklyMealPlannerGroceryGenerator{
     }
 
 
-    // CO-3: Method
+   
     public static void displayMenu() {
 
         System.out.println("\n==================================");
@@ -84,7 +83,7 @@ public class WeeklyMealPlannerGroceryGenerator{
     }
 
 
-    // CO-3: Method
+    
     public static void displayMeals() {
 
         System.out.println("\nAvailable Meals:");
@@ -97,14 +96,13 @@ public class WeeklyMealPlannerGroceryGenerator{
     }
 
 
-    // CO-3: Method
     public static void createMealPlan() {
 
         System.out.println("\n==================================");
         System.out.println("         CREATE MEAL PLAN");
         System.out.println("==================================");
 
-        // CO-2: Nested for loops
+         
         for (int day = 0; day < days.length; day++) {
 
             System.out.println("\n--- " + days[day] + " ---");
@@ -120,7 +118,6 @@ public class WeeklyMealPlannerGroceryGenerator{
 
                 if (selectedMeal >= 1 && selectedMeal <= meals.length) {
 
-                    // Convert day and meal position into 1D index
                     int index = day * 3 + meal;
 
                     mealPlan[index] = meals[selectedMeal - 1];
@@ -139,7 +136,6 @@ public class WeeklyMealPlannerGroceryGenerator{
     }
 
 
-    // CO-3: Method
     public static void viewMealPlan() {
 
         System.out.println("\n==================================");
@@ -171,7 +167,6 @@ public class WeeklyMealPlannerGroceryGenerator{
     }
 
 
-    // CO-3: Method
     public static void generateGroceryList() {
 
         int eggs = 0;
@@ -184,7 +179,6 @@ public class WeeklyMealPlannerGroceryGenerator{
         int milk = 0;
         int dal = 0;
 
-        // CO-2: for loop
         for (int i = 0; i < mealPlan.length; i++) {
 
             String selectedMeal = mealPlan[i];
